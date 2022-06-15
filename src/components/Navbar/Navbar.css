@@ -1,0 +1,180 @@
+li{
+    list-style: none; 
+}
+a{
+    text-decoration: none;
+}
+
+.app_navbar{
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.app_navbar-logo{
+    display: grid;
+    grid-column: 2/3;
+    align-items: center;
+    justify-content: flex-start;
+}
+.app_navbar-links{
+    grid-column: 3/4;
+}
+.app_navbar-links ul {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.app_navbar-social-media{
+    grid-column: 4/5;
+}
+.app_navbar-social-media ul {
+    height: 10rem;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  align-items: center;
+  justify-content: flex-end;
+}
+.app_navbar-social-media ul li {
+    text-align: right;
+  }
+  
+  .app_navbar-social-media ul li:first-child {
+    grid-column: 2/3;
+  }
+.app_navbar-social-media .hamburger_menu {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1080px) {
+    .app_navbar{
+        height: 8rem;
+        grid-template-columns: 2rem 1fr 2fr 1fr 2rem;
+    }
+    .app_navbar-logo,
+    .app_navbar-links ul,
+    .app_navbar-social-media ul{
+        height: 8rem;
+    }
+
+}
+
+@media screen and (max-width: 998px) {
+    .app_navbar{
+        height: 7rem;
+        grid-template-columns: 2rem 1fr 2fr 1fr 2rem;
+    }
+    .app_navbar-links{
+        height: 7rem;
+        display: none;
+    }
+    .app_navbar-logo,
+    .app_navbar-links ul,
+    .app_navbar-social-media ul{
+        height: 7rem;
+    }
+    .app_navbar-links{
+        display: none;
+    }
+    .app_navbar-links_mobile {
+        grid-column: 2/4;
+        position: relative;
+        z-index: 99;
+      }
+    .app_navbar-links_mobile {
+        background-color: white;
+        height: 20rem;
+        display: grid;
+        grid-column: 2/5;
+        align-items: center;
+        padding-left: 3rem;
+        transition: all 2s linear;
+        transform-origin: top;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+    .app_navbar-links_mobile ul {
+        height: 20rem;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: start;
+      }
+    
+    .app_navbar-links_mobile ul li:first-child {
+        transition-delay: 0.2s;
+      }
+
+    .app_navbar-social-media {
+        grid-row: 1/2;
+        grid-column: 3/5;
+        justify-items: end;
+        align-items: center;
+        transition: all 2s linear;
+      }
+      .app_navbar-social-media {
+        height: 7rem;
+        display: flex;
+        justify-self: end;
+        align-items: center;
+      }
+    .app_navbar-social-media .app_navbar-social-media_desktop{
+        height: 0;
+        display: none;
+    }
+    .app_navbar-social-media .hamburger_menu {
+        display: block;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 798px) {
+    .app_navbar {
+        height: 6rem;
+        grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
+      }
+    
+      .app_navbar-logo,
+      .app_navbar-social-media ul {
+        height: 6rem;
+      }
+    
+      .app_navbar-social-media {
+        height: 6rem;
+        display: flex;
+        justify-self: end;
+        align-items: center;
+      }
+    
+      .app_navbar-social-media .hamburger-menu {
+        display: block;
+        font-size: 2.5rem;
+      }
+}
+@media screen and (max-width: 798px) {
+    .app_navbar {
+        height: 6rem;
+        grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+      }
+    
+      .app_navbar-logo,
+      .app_navbar-social-media ul {
+        height: 6rem;
+      }
+    
+      .app_navbar-social-media {
+        height: 6rem;
+        display: flex;
+        justify-self: end;
+        align-items: center;
+      }
+    
+      .app_navbar-social-media .hamburger-menu {
+        display: block;
+        font-size: 2.5rem;
+      }
+}
